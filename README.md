@@ -1,4 +1,4 @@
-﻿#Overview
+﻿# Overview
 The challenge is to build an exemplary ETL-DWH-Visualization pipeline using Kafka, PostgreSQL and MicroStrategy. The ETL aims at integrating information from a source database with information available from a public API using Kafka as the medium to move data around. The DWH and Visualization tool includes setting up a reasonable schema and building dashboards using MicroStrategy.
 Prerequisites
 The assignment requires availability of a personal laptop with Internet access.
@@ -17,7 +17,7 @@ total (double)
 item_count (integer)
 
 After the schema is available, you should be able to import the data in this CSV (you can use PostgreSQL’s COPY command).
-#Requirements
+# Requirements
 The main goal is to build a DWH from the data contained in the source database in order for the business stakeholders to perform geographical analysis of the user base and revenue streams and to visualize two main KPI on top of it.
 The source table includes information at the zipcode level, but the business stakeholders want to be able to perform analysis based on city information. Your task is to implement an ETL process using Kafka that loads data from both the source database and the free https://ziptasticapi.com, using the zipcode information contained in the former to resolve information about the city it belongs to through mentioned API.
 
@@ -29,7 +29,7 @@ Finally, we would like you to suggest any additional KPI that comes to your mind
 
 
 
-#DWH design Approach
+# DWH design Approach
 
 As we don’t have much attributes here I am simply desiging the below 3 flat dimension tables
 
@@ -41,14 +41,14 @@ As we don’t have much attributes here I am simply desiging the below 3 flat di
 
 Note : For the larger Datawarehousing perspective, We can keep some daily, weekly, monthly aggregated facts tables. I am not including any aggregated fact tables for this demo as this dealt with lesser records and attributes
 
-#ER Diagram
+# ER Diagram
 
 
-#Infrastructure
+# Infrastructure
 
 
 
-#Design:-
+# Design:-
 1. Install the confluent JDBC source postgres kafka connector from here https://www.confluent.io/product/connectors/
 
 2.  Confluent connector is connected to postgres orders table for capturing the incoming streams(CDC - change Data Capture). For the Demo purpose, I had kept incremental column to identify Change Capture. In production environment we should keep either timestamp or Incremental & Timestamp column to capture the changes.
@@ -59,7 +59,7 @@ Note : For the larger Datawarehousing perspective, We can keep some daily, weekl
 
 5. Connect to Order/Date/Location Dimensions from the Microstrategy Dashboard for the visualization
 
-#Installation & Run
+# Installation & Run
 
 1. Start the confluent kafka connector in the below order
 (For the Demo purpose , start Kakfa in standalone mode)
