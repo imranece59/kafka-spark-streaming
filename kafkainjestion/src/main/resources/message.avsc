@@ -1,0 +1,12 @@
+{
+ "name": "orders",
+ "type": "record",
+ "fields": [
+     {"name": "order_id", "type": "int"},
+     {"name": "delivery_date",  "type": "int"},
+     {"name": "user_id",  "type": "int"},
+     {"name": "zipcode",  "type": "string"},
+     {"name": "total",  "type": "double"},
+     {"name": "item_count",  "type": "int"}
+ ]
+}
