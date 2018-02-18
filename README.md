@@ -43,8 +43,13 @@ Note : For the larger Datawarehousing perspective, We can keep some daily, weekl
 
 # ER Diagram
 
+Refer : ER_Diagram.png
+
+
 
 # Infrastructure
+
+Refer : Infrastructure.png
 
 
 
